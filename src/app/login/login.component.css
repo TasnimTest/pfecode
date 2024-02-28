@@ -50,10 +50,6 @@ form {
   grid-row: 1 / 2;
 }
 
-form.sign-in-form {
-  z-index: 2;
-}
-
 .title {
   font-size: 2.2rem;
   color: #444;
@@ -85,7 +81,7 @@ form.sign-in-form {
 }
 
 .input-field input::placeholder {
-  color: #aaa;
+  color: #aaaaaae9;
   font-weight: 500;
 }
 
@@ -205,6 +201,7 @@ form.sign-in-form {
   height: auto; /* Ajuste automatiquement la hauteur pour préserver les proportions */
 }
 
+
 .menu {
   list-style-type: none;
   margin: 0;
@@ -226,7 +223,7 @@ form.sign-in-form {
   font-weight: bold;
 }
 
-/* Styles pour rendre la navbar réactive */
+ /*Styles pour rendre la navbar réactive */
 @media screen and (max-width: 800px) {
   .navbar {
       flex-direction: column;
@@ -237,3 +234,4 @@ form.sign-in-form {
       margin-top: 10px;
   }
 }
+
