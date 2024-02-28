@@ -11,18 +11,17 @@ import { FormsModule } from '@angular/forms';
   styleUrl: './login.component.css'
 })
 export class LoginComponent {
-  loginObj : any = {
-    "Matricule": "",
-    "Password" : ""
-  };
+  loginObj : Login;
 
   
-  constructor(private http: HttpClient, private router : Router){}
+  constructor(private http: HttpClient, private router : Router){
+    this.loginObj = new Login();
+  }
 
 
   onLogin(){
     debugger;
-    this.http.post('http://localhost:4200', this.loginObj).subscribe((res:any)=> {
+    this.http.post('http://localhost:4200/login', this.loginObj).subscribe((res:any)=> {
       if (res.result){
         alert('login Sucess');
         localStorage.setItem('loginTOken', res.data.token);
@@ -32,5 +31,13 @@ export class LoginComponent {
       }
     })
   }
+}
 
+export class Login{
+  Matricule : number;
+  Password : string;
+  constructor(){
+    this.Matricule=1;
+    this.Password="";
+  }
 }
